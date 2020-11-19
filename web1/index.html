@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <style>
 h1{
-    background: #00468C;
+    background: #f4f4f4;
     padding: 1rem;
      text-align: center;
+}
+
+.btn:hover {
+  background: #444;
 }
 
 
@@ -19,7 +23,7 @@ h1{
 </head>
 <body>
     <h1>Book Details</h1>
-    <button type="button" onclick="loadXML()">Get Book Details</button>
+    <button class="btn" type="button" onclick="loadXML()">Get Book Details</button>
     <br><br>
     <table id="demo"></table>
     <script>
