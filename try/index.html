@@ -9,9 +9,10 @@
     <input type="button" value="SetCookies" onclick="Setcookie()">
     <input type="button" value="GetCookies" onclick="Getcookie()">
     <script>
-        function Setcookie()
+        function Setcookie(cname,cvalue)
         {
-            document.cookie="username=Rithul";
+            document.cookie = cname + "=" + cvalue + ";path=/";
+            
         }
         function Getcookie()
         {
