@@ -107,6 +107,8 @@ function validation()
         window.alert("Please enter your phone number.");
         phone.focus();
         return false;
+
+        
     }
  if (usern.value == "")                                  
     {
