@@ -8,10 +8,13 @@
 </head>
 <body>
     <section class="container">
-    <h1>Book Details</h1>
+    <h1>Student Details</h1>
     <button class="btn" type="button" onclick="loadXML()">Get Student Details</button>
     <br><br>
     <table id="demo"></table>
+
+    </section>
+
     <script>
 
     	function loadXML()
@@ -24,7 +27,7 @@
                     myFunction(this);
                 }
             };
-            xhttp.open("GET","gate.xml",false);
+            xhttp.open("GET","gate.xml",true);
             xhttp.send();
         }
         function myFunction(xml)
@@ -36,13 +39,13 @@
             for(i=0;i<x.length;i++)
             {
                 t +="<tr><td>" +
-                x[i].getElementsByTagName("getElementsByTagName")[0].childNodes[0].nodeValue +
+                x[i].getElementsByTagName("STU-NAME")[0].childNodes[0].nodeValue +
                 "</td><td>" +
-                x[i].getElementsByTagName("Branch")[0].childNodes[0].nodeValue +
+                x[i].getElementsByTagName("STU-COLLEGE")[0].childNodes[0].nodeValue +
                 "</td><td>"+
-                x[i].getElementsByTagName("College")[0].childNodes[0].nodeValue +
+                x[i].getElementsByTagName("STU-BRANCH")[0].childNodes[0].nodeValue +
                 "</td><td>"+
-                x[i].getElementsByTagName("Email")[0].childNodes[0].nodeValue +
+                x[i].getElementsByTagName("STU-EMAIL")[0].childNodes[0].nodeValue +
                 "</td></tr>";
             }
             document.getElementById("demo").innerHTML=t;
@@ -101,7 +104,7 @@ body {
                 
 </style>
 
-    
-   </section>
+
+   
 </body>
 </html>

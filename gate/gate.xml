@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<CHRIST>
+		<CS>
+			<STU-NAME>Daphney</STU-NAME>
+			<STU-BRANCH>Central</STU-BRANCH>
+			<STU-COLLEGE>Christ University</STU-COLLEGE>
+			<STU-EMAIL>daph.central@christ.in</STU-EMAIL>
+		</CS>
+
+			<CS>
+			<STU-NAME>Jake</STU-NAME>
+			<STU-BRANCH>Hosur</STU-BRANCH>
+			<STU-COLLEGE>Christ University</STU-COLLEGE>
+			<STU-EMAIL>daph.hosur@christ.in</STU-EMAIL>
+		</CS>
+
+			<CS>
+			<STU-NAME>Anna</STU-NAME>
+			<STU-BRANCH>Bgr</STU-BRANCH>
+			<STU-COLLEGE>Christ University</STU-COLLEGE>
+			<STU-EMAIL>anna.central@christ.in</STU-EMAIL>
+		</CS>
+		
+</CHRIST> 
