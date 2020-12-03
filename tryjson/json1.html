@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Details</title>
+     <h1 id="demo"></h1>
+    <img src="lb.jpg">
+    <br>
+    <script>
+        function load()
+        {
+            let url=" http://time.jsontest.com ";
+            var request;
+            request=new XMLHttpRequest();
+            request.onreadystatechange=function()
+            {
+                if(request.readyState==4)
+                {
+                    var obj=JSON.parse(request.responseText);
+                    document.getElementById("book").innerHTML=obj.time;
+                    document.getElementById("name").innerHTML=obj.date;
+                    document.getElementById("year").innerHTML=obj.time;
+                    document.getElementById("copies").innerHTML=obj.date;
+                    document.getElementById("views").innerHTML=obj.date;
+                }
+            };
+            request.open("GET",wsd.json,true);
+            request.send();
+
+             setInterval(myFunction, 1000);
+
+            function myFunction() {
+            let d = new Date();
+            document.getElementById("demo").innerHTML=
+            d.getHours() + ":" +
+            d.getMinutes() + ":" +
+            d.getSeconds();
+            }
+        }
+    </script>
+
+    <style>
+    button{
+        background-color: #FFFF99;
+        border: 2px solid black;
+        color: black;
+        font-size: 14px;
+        padding: 5px;
+        width: 10%;
+       
+</style>
+
+</head>
+<body>
+    Title:<span id="book"></span><br>
+    author:<span id="name"></span><br>
+    Year of publishing:<span id="year"></span><br>
+    Copies sold:<span id="copies"></span><br>
+    Views on our site:<span id="views"></span><br>
+
+
+    <br>
+    <button type="button" onclick="load()">Load Information</button>
+</body>
+</html>
