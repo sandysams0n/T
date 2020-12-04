@@ -40,9 +40,9 @@
                 if(request.readyState==4)
                 {
                     var obj=JSON.parse(request.responseText);
-                    document.getElementById("book").innerHTML=obj.price;
-                    document.getElementById("name").innerHTML=obj.colour;
-                    document.getElementById("year").innerHTML=obj.mat;
+                    document.getElementById("book").innerHTML=obj.book;
+                    document.getElementById("name").innerHTML=obj.name;
+                    document.getElementById("year").innerHTML=obj.year;
                 }
             };
             request.open("GET","wsd.json",true);
@@ -54,9 +54,9 @@
 <body>
     
     <br>
-    Price:<span id="book"></span><br>
-    Colour:<span id="name"></span><br>
-    Material:<span id="year"></span><br>
+    Title:<span id="book"></span><br>
+    Author:<span id="name"></span><br>
+    Year of publishing:<span id="year"></span><br>
 
     <button type="button" class="btn" onclick="load()">Get details</button>
    
