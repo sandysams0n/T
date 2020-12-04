@@ -1,8 +1,5 @@
 {
-	"book": "The Last Battle",
-	"name": "C. S. Lewis",
-	"year":"1956",
-	"copies": "100M plus",
-	"views": "1024"
-
+"price": "399",
+"colour": "Wine Red",
+"mat": "Cotton"
 }
