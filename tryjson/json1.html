@@ -43,6 +43,8 @@
                     document.getElementById("book").innerHTML=obj.book;
                     document.getElementById("name").innerHTML=obj.name;
                     document.getElementById("year").innerHTML=obj.year;
+                    document.getElementById("copies").innerHTML=obj.copies;
+                    document.getElementById("views").innerHTML=obj.views;
                 }
             };
             request.open("GET","wsd.json",true);
@@ -57,6 +59,8 @@
     Title:<span id="book"></span><br>
     Author:<span id="name"></span><br>
     Year of publishing:<span id="year"></span><br>
+    Copies sold:<span id="copies"></span><br>
+    Views on our site:<span id="views"></span><br>
 
     <button type="button" class="btn" onclick="load()">Get details</button>
    
