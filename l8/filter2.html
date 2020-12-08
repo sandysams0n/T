@@ -7,6 +7,9 @@
     <script src="angular.min.js"></script>
     <script src="filter_app.js"></script>
     <link href="filter.css" rel="stylesheet">
+
+        <h1>Book Details</h1>
+
 </head>
 <body ng-app="MyApp">
     <div ng-controller="MyCtrl">
@@ -14,24 +17,27 @@
         <br \>
         <br \>
 
-        Search:<input type="text" placeholder="Seach Employees" ng-model="Search" />
+        Search:<input type="text" placeholder="Seach Authors" ng-model="Search" />
         <br \>
         <br \>
         <table>
             <tr>
-                <th>Name</th>
-                <th>DOB</th>
-                <th>Gender</th>
-                <th>Salary(number)</th>
-                <th>Salary(currency)</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Genre</th>
+                <th>Year of publishing</th>
+                <th>Rating</th>
+                <th>Price</th>
+                
             </tr>
             <tbody>
                 <tr ng-repeat="employee in employees | limitTo:rowlimit |filter:Search ">
-                    <td>{{employee.name | uppercase}}</td>
-                    <td>{{employee.dob | date:"dd/MM/yyyy"}}</td>
-                    <td>{{employee.gender | lowercase}}</td>
-                    <td>{{employee.salary | number:0}}</td>
-                    <td> {{employee.salary | currency:"&#8377;":0 }}</td>
+                    <td>{{book.title | uppercase}}</td>
+                    <td>{{book.author| uppercase}}</td>
+                    <td>{{book.genre | lowercase}}</td>
+                    <td>{{book.year| number:0}}</td>
+                    <td>{{book.rate| number:0}}</td>
+                    <td>{{book.price | currency:"&#8377;":0 }}</td>
                 </tr>
             </tbody>
         </table>
