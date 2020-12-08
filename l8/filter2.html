@@ -31,7 +31,7 @@
                 
             </tr>
             <tbody>
-                <tr ng-repeat="employee in employees | limitTo:rowlimit |filter:Search ">
+                <tr ng-repeat="book in book | limitTo:rowlimit |filter:Search ">
                     <td>{{book.title | uppercase}}</td>
                     <td>{{book.author| uppercase}}</td>
                     <td>{{book.genre | lowercase}}</td>
